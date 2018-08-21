@@ -5,10 +5,9 @@ RUN wget https://github.com/hypriot/image-builder-rpi/releases/download/v1.9.0/h
  && unzip hypriotos*\
  && rm *.zip
 RUN wget https://github.com/dhruvvyas90/qemu-rpi-kernel/raw/master/kernel-qemu-4.4.34-jessie
+
 CMD qemu-system-arm -M raspi2\
  -drive format=raw,file=hypriotos-rpi-v1.9.0.img\
  -kernel kernel-qemu-4.4.34-jessie
  -m 256\
  -append "root=/dev/sda2"
-# -net nic\
-# -net user,hostfwd=tcp::2222-:22
