@@ -6,6 +6,7 @@ RUN apk add qemu qemu-system-arm \
  
 USER qemu
 WORKDIR ~
+RUN PWD
 RUN wget https://github.com/hypriot/image-builder-rpi/releases/download/v1.9.0/hypriotos-rpi-v1.9.0.img.zip\
  && unzip hypriotos*\
  && rm *.zip
