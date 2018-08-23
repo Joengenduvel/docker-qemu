@@ -12,9 +12,9 @@ RUN cd ~\
 RUN cd ~\
  && wget https://github.com/dhruvvyas90/qemu-rpi-kernel/raw/master/kernel-qemu-4.4.34-jessie
 
-CMD qemu-system-arm -M raspi2\
+CMD cd ~\
+ && qemu-system-arm -M raspi2\
  -drive format=raw,file=hypriotos-rpi-v1.9.0.img\
  -kernel kernel-qemu-4.4.34-jessie\
  -m 256\
- -append "root=/dev/sda2"\
- -enable-kvm
+ -append "root=/dev/sda2"
