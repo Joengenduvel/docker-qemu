@@ -1,6 +1,6 @@
 FROM alpine
 
-RUN apk add qemu qemu-system-arm \
+RUN apk add --no-cache qemu qemu-system-arm \
  && adduser -S qemu -g qemu -G kvm
  
  
